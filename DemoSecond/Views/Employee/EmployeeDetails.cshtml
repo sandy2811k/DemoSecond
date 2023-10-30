@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "EmployeeDetails";
+}
+
+<h1>Employee Details</h1>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Enter your Emp Id</td>
+            <td>
+                @Html.TextBox("EmpId")
+            </td>
+        </tr>
+
+        <tr>
+            <td>Enter your Name</td>
+            <td>
+                @Html.TextBox("Name")
+            </td>
+        </tr>
+
+        <tr>
+            <td>Select Gender</td>
+            <td>
+                @Html.RadioButton("gender" , "Male") Male
+                @Html.RadioButton("gender" , "Female") Female
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>Select Department</td>
+            <td>@Html.DropDownList("Departments")</td>
+        </tr>
+
+        <tr>
+            <td>Enter Salary</td>
+            <td>
+                @Html.TextBox("Salary")
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="save" />
+            </td>
+        </tr>
+
+    </table>
+}
